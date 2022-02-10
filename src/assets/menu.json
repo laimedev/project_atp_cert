@@ -2,7 +2,7 @@
     {
         "id": 1,
         "url": null,
-        "icon": "fa fa-lock",
+        "icon": "far fa-file-word",
         "displayName": "Administracion",
         "subMenu": [
             {
@@ -10,41 +10,6 @@
                 "url": "security.users",
                 "icon": "fa fa-users",
                 "displayName": "Usuarios",
-                "subMenu": []
-            },
-            {
-                "id": 3,
-                "url": "security.roles",
-                "icon": "fa fa-user-plus",
-                "displayName": "Perfiles",
-                "subMenu": []
-            },
-            {
-                "id": 17,
-                "url": "security.kpis",
-                "icon": "fa fa-wifi",
-                "displayName": "H4: Kpis Radar",
-                "subMenu": []
-            },
-            {
-                "id": 30,
-                "url": "security.neiran",
-                "icon": "fa fa-lock",
-                "displayName": "H5: Comandos Neiran",
-                "subMenu": []
-            },
-            {
-                "id": 39,
-                "url": "security.kpis.thresholds",
-                "icon": "fa fa-lock",
-                "displayName": "H7: Threshold de Kpis",
-                "subMenu": []
-            },
-            {
-                "id": 48,
-                "url": "security.thresholds.evaluation",
-                "icon": "fa fa-lock",
-                "displayName": "H8: Thresholds Evaluación",
                 "subMenu": []
             }
         ]

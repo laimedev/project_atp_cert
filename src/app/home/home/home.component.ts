@@ -10,19 +10,16 @@ import { environment } from 'src/environments/environment';
 })
 export class HomeComponent implements OnInit {
 
-  
   today = new Date()
   user: string
-
 
   constructor(protected loginService: LoginService,
     private docTitleService: Title) {
     this.user = loginService.getLogin()?.userName
-    
    }
 
   ngOnInit(): void {
-    this.docTitleService.setTitle('Home - ' + environment.appTitle)
+    this.docTitleService.setTitle('Inicio - ' + environment.appTitle)
   }
 
   // openMenu() {

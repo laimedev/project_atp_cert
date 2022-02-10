@@ -1,7 +1,7 @@
 <div class="side-menu">
     <div class="vertical-nav">
         <div class="side-menu-header bg-light">
-            <span class="brand mb-0"><img src="http://149.56.2.1/entel-sgsi/public/img/logo_entel.png"
+            <span class="brand mb-0 img-qhatu"><img src="https://play-lh.googleusercontent.com/C-aFQBiMPe1KiEtObNo4aFrbxEdFj0Lqm9Gbe_RDOQpjJHoU5s4zyVW2vYSheOjuM1fL"
                     style="height: 35px;">
             </span>
         </div>
@@ -10,7 +10,7 @@
             <li *ngFor="let item of menu; let i = index" [class.dropdown]="item.subMenu?.length>0">
                 <a class="" *ngIf="!item.url" [attr.data-toggle]="item.subMenu?.length>0?'collapse':''" [href]="'#collapse-id-' + item.id" aria-expanded="false"
                     >
-                    <i class="far fa-file-word icon"></i>
+                    <i class="{{ item.icon }} icon"></i>
                     <span class="color-menu">{{ item.displayName }}</span>
                 </a>
 

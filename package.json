@@ -1,5 +1,5 @@
 {
-  "name": "entel-frontend",
+  "name": "atp-cert-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

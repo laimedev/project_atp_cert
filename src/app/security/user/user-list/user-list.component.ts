@@ -35,11 +35,17 @@ const ELEMENT_DATA = [
 })
 export class UserListComponent implements OnInit, AfterViewInit {
 
-  displayedColumns: string[] = ['UserId','UserName', 'Email', 'PasswordHash', 'PhoneNumber', 'CreateDate', 'UpdateUser', 'options'];
-  dataSource: PaginatedDataSource<User>
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatTable, { static: false, read: ElementRef }) table_: ElementRef;
+  listUser: User [] = [
+    // {UserId: 1, UserName: 'UserName', Email: 'Emsasaail', PasswordHash: 'PasswordHasasash', PhoneNumber: 'PhonesasaNumber', CreateDate: 'CreasasateDate' }
+    
+  ];
+
+  displayedColumns: string[] = ['UserId','UserName', 'Email', 'PasswordHash', 'PhoneNumber', 'CreateDate', 'options'];
+  dataSource = new MatTableDataSource(this.listUser);
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   dateRange = new FormGroup({
     start: new FormControl(),
@@ -53,38 +59,24 @@ export class UserListComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.docTitleService.setTitle('Usuarios - ' + environment.appTitle)
-    // this.dataSource =  
-    
     this.userService.getAllUser2().subscribe( resp => {
-      console.log('data');
-      console.log(resp['result']);
       this.dataSource = resp['result'];
     })
-    
-
-    // console.log(this.dataSource);
   }
 
-  ngAfterViewInit(): void {
 
-    // this.overlay.CustomCreate(this.table_.nativeElement)
-
-    // this.dataSource.loading$.subscribe((bol) => {
-    //   if (bol) {
-    //     this.overlay.openOverlay()
-    //   } else {
-    //     this.overlay?.closeOverlay()
-    //   }
-    //   console.log('loading: ' + bol);
-
-    // })
+  ngAfterViewInit(){
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
+
+ 
 
   export() {
 
-    this.userService
-      .export(this.dataSource.lastFilter)
-      .subscribe(({ data }) => Util.download(data, 'usuarios'));
+    // this.userService
+    //   .export(this.dataSource.lastFilter)
+    //   .subscribe(({ data }) => Util.download(data, 'usuarios'));
 
   }
 
@@ -93,7 +85,7 @@ export class UserListComponent implements OnInit, AfterViewInit {
     const modalRef = this.modalService.open(CreateUserComponent, { size: 'lg', backdrop: 'static' });
 
     modalRef.result.then(res => {
-      this.dataSource.updateTable(0)
+      // this.dataSource.updateTable(0)
     })
   }
 
@@ -112,7 +104,7 @@ export class UserListComponent implements OnInit, AfterViewInit {
     const modalEdit = this.modalService.open(EditUserComponent, { size: 'lg', backdrop: 'static' })
     modalEdit.componentInstance.user = user
     modalEdit.result.then(res => {
-      this.dataSource.updateTable(this.paginator.pageIndex)
+      // this.dataSource.updateTable(this.paginator.pageIndex)
     })
 
 
@@ -123,7 +115,7 @@ export class UserListComponent implements OnInit, AfterViewInit {
     const deleteModal = this.modalService.open(DeleteUserComponent, { size: 'lg', backdrop: 'static' })
     deleteModal.componentInstance.user = user
     deleteModal.result.then(res => {
-      this.dataSource.updateTable(this.paginator.pageIndex)
+      // this.dataSource.updateTable(this.paginator.pageIndex)
     })
   }
 
@@ -143,7 +135,7 @@ export class UserListComponent implements OnInit, AfterViewInit {
         { field: 'createdAt', value: endStr, operator: 'lte' }
       ]
 
-      this.dataSource.filterInput(filters)
+      // this.dataSource.filterInput(filters)
 
     } else {
       console.log('Not valid');
