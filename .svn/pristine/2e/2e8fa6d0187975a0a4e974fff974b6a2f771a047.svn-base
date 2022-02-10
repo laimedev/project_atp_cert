@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EntelFrontend</title>
+  <base href="/spa/">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="styles.2e09325f05bf18a6885f.css"></head>
+<body class="mat-typography">
+  <app-root></app-root>
+<script src="runtime.e227d1a0e31cbccbf8ec.js" defer></script><script src="polyfills.3870e72f346712382028.js" defer></script><script src="scripts.fd6c5645829e82918226.js" defer></script><script src="main.add8bc1d7e54b4f1eb78.js" defer></script></body>
+</html>

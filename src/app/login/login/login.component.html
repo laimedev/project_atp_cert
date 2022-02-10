@@ -1,0 +1,62 @@
+<!-- As a heading -->
+<div class="app-body">
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="card">
+                <div class="card-header text-white btn-primary">Inicio de Sesión</div>
+                <div class="card-body">
+                    <form (ngSubmit)="submit()" #theForm="ngForm">
+                        <div *ngIf="invalidUser" class="alert alert-danger" role="alert">
+                            Usuario y/o contraseña incorrecta 
+                          </div>
+                        <div class="form-group row">
+                            <label for="username"
+                                class="col-sm-4 col-form-label text-right font-weight-bold">Correo electronico</label>
+                            <div class="col-sm-6">
+                                <input [(ngModel)]="login.userName" #userName="ngModel" required name="userName"
+                                    type="text"
+                                    [ngClass]="{'is-invalid' : (userName.dirty || userName.touched)  && userName.errors?.required}"
+                                    class="form-control" autocomplete="off" id="userName">
+                                <div *ngIf="(userName.dirty || userName.touched)  && userName.errors?.required"
+                                    class="invalid-feedback">
+                                    Ingrese un nombre de usuario válido.
+                                </div>
+                                <div *ngIf="userName.valid || (!userName.dirty && !userName.touched) ">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password"
+                                class="col-sm-4 col-form-label text-right font-weight-bold">Contraseña</label>
+                            <div class="col-sm-6">
+                                <input [(ngModel)]="login.password" #password="ngModel" name="password" required
+                                [ngClass]="{'is-invalid' : (password.dirty || password.touched)  && password.errors?.required}"
+                                    type="password" class="form-control" id="password">
+                                <div
+                                *ngIf="(password.dirty || password.touched)  && password.errors?.required"
+                                class="invalid-feedback">
+                                    Ingrese una contraseña válida.
+                                </div>
+                                <div *ngIf="password.valid || (!password.dirty && !password.touched) ">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-4 offset-sm-8">
+                                <button type="submit" class="btn btn-primary"
+                                [ngClass]="{'btn-primary': (disableButton === false), 'btn-warning': (disableButton === true)}"
+                                    [disabled]="!theForm.form.valid || disableButton">
+                                    <i *ngIf="disableButton" class="fas fa-spin fa-cog"></i>
+                                    INGRESAR</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <script type="text/javascript" src="http://172.18.1.96/4identity_server/bit4id-sign.min.js"></script> -->
+
+
+</div>
