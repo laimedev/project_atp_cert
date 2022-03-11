@@ -16,6 +16,7 @@ export class RanInfoTablaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

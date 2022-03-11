@@ -2,71 +2,50 @@
     <div class="row">
         <div class="col">
             <div class="card">
-                <div class="card-header bg-gray">
+                <div class="card-header bg-gray" >
                     <div class="row">
                         <div class="col-12">
-                            <span class="letra-cabecera">Mantenimiento de Usuarios</span>
+                            <span class="letra-cabecera">Mantenimiento de Productores</span>
                         </div>
-
-                    </div>
-                    <div class="row mt-4">
-                        <!-- <div class="col-12 text-right">
-                            <label class="font-weight-bold">Fecha: &nbsp;&nbsp;</label>
-                            <mat-form-field appearance="outline">
-                                <mat-label>Seleccione un rango</mat-label>
-                                <mat-date-range-input [formGroup]="dateRange" [rangePicker]="picker">
-                                    <input noKeyEventsHere matStartDate formControlName="start" placeholder="Inicio">
-                                    <input noKeyEventsHere matEndDate formControlName="end" placeholder="Fin">
-                                </mat-date-range-input>
-                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                <mat-date-range-picker #picker></mat-date-range-picker>
-                            </mat-form-field>
-                        </div> -->
-                        <div class="col-12 text-right">
-                            <button (click)="openCreate()"  class="btn btn-primary">NUEVO</button>&nbsp;
-                            <!-- <button (click)="search()"  class="btn btn-primary">BUSCAR</button>&nbsp; -->
-                            <button (click)="export()" class="btn btn-success">EXPORTAR</button>&nbsp;
+                        <div class="col-12">
                         </div>
                     </div>
                 </div>
 
 
-             
 
                 <div class="card-body">
                     <div class="row card-header bg-gray">
                         <div class="col-12">
                             <div  class="table-responsive  table-striped mat-elevation-z8 ">
                                
-
-
                                 <table  style="width: 100%;" mat-table [dataSource]="dataSource" matSort class="" >
       
                                     <ng-container matColumnDef="UserId">
                                       <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                      mat-sort-header class='btn-primary'> USERID </th>
-                                      <td mat-cell *matCellDef="let element"> {{element.UserId}} </td>
+                                      mat-sort-header class='btn-primary'> ID </th>
+                                      <td mat-cell *matCellDef="let element"> {{element.idProductor}} </td>
                                     </ng-container>
                                   
-                                    <ng-container matColumnDef="UserName">
+                                     <ng-container matColumnDef="UserName">
                                       <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                      mat-sort-header class='btn-primary'> NOMBRE </th>
-                                      <td mat-cell *matCellDef="let element"> {{element.UserName}} </td>
+                                      mat-sort-header class='btn-primary'> Nombre Completo </th>
+                                      <td mat-cell *matCellDef="let element"> {{element.nombreProductor}} </td>
                                     </ng-container>
                                   
-                                    <ng-container matColumnDef="Email">
+                                     <ng-container matColumnDef="Email"> 
                                       <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
                                       mat-sort-header class='btn-primary'> CORREO </th>
-                                      <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+                                      <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
                                     </ng-container>
                                   
                                     <ng-container matColumnDef="PasswordHash">
                                       <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
                                       mat-sort-header class='btn-primary'> CLAVE </th>
-                                      <td mat-cell *matCellDef="let element"> {{element.PasswordHash}} </td>
+                                      <td mat-cell *matCellDef="let element"> {{element.sexo}} </td>
                                     </ng-container>
 
-                                    <ng-container matColumnDef="PhoneNumber">
+                                    <!--<ng-container matColumnDef="PhoneNumber">
                                         <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
                                         mat-sort-header class='btn-primary'> TELEFONO </th>
                                         <td mat-cell *matCellDef="let element"> {{element.PhoneNumber}} </td>
@@ -90,26 +69,24 @@
                                         <a class="btn btn-light btn-sm"><i
                                                 class="far fa-trash-alt"></i></a>
                                         </td>
-                                    </ng-container>
+                                    </ng-container> -->
                                   
-                                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
                                   </table>
 
-                                  <mat-paginator [pageSizeOptions]="[1, 10, 20]" showFirstLastButtons></mat-paginator>
+                                  <!-- <mat-paginator [pageSizeOptions]="[1, 10, 20]" showFirstLastButtons></mat-paginator> -->
 
 
                                 <!-- <mat-paginator *ngIf="dataSource.page$ | async as page" [length]="page.total"
                                     [pageSize]="page.pageSize" [pageIndex]="page.pageNumber" [hidePageSize]="false"
                                     (page)="dataSource.fetch($event.pageIndex)">
                                 </mat-paginator> -->
+
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
 
 
 

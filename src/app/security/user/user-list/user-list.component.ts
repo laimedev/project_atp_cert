@@ -61,6 +61,7 @@ export class UserListComponent implements OnInit, AfterViewInit {
     this.docTitleService.setTitle('Usuarios - ' + environment.appTitle)
     this.userService.getAllUser2().subscribe( resp => {
       this.dataSource = resp['result'];
+      console.log(resp['result'])
     })
   }
 

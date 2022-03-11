@@ -18,6 +18,7 @@ import { UtilsModule } from './utils/utils.module';
 
 import {SegModule} from './seg/seg.module'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MaintenanceModule } from './maintenance/maintenance.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HomeModule,
     LoginModule,
     SegModule,
+    MaintenanceModule,
     SecurityModule,
     BrowserAnimationsModule,
     NgbModule,
