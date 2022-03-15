@@ -11,11 +11,13 @@ export class HeaderComponent implements OnInit {
 
   user: string
 
-  constructor(private toggleMenuService:ToggleMenuService, protected loginService: LoginService) { }
+  constructor(private toggleMenuService:ToggleMenuService, protected loginService: LoginService) {
+   }
 
   ngOnInit(): void {
 
     this.user = this.loginService.getLogin()?.userName
+    this.toggleMenu();
 
   }
 

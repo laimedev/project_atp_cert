@@ -4,19 +4,20 @@
         "nombreProductor": "cangulo",
         "dni": "sistemas@amazonastrading.com",
         "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
         "estado": 1
     },
     {
-        "idProductor": 2,
+    
+        "idProductor": 1,
         "nombreProductor": "cangulo",
         "dni": "sistemas@amazonastrading.com",
         "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
         "estado": 1
     },
     {
@@ -24,19 +25,9 @@
         "nombreProductor": "cangulo",
         "dni": "sistemas@amazonastrading.com",
         "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
-        "estado": 1
-    },
-    {
-        "idProductor": 2,
-        "nombreProductor": "cangulo",
-        "dni": "sistemas@amazonastrading.com",
-        "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
         "estado": 1
     },
     {
@@ -44,19 +35,9 @@
         "nombreProductor": "cangulo",
         "dni": "sistemas@amazonastrading.com",
         "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
-        "estado": 1
-    },
-    {
-        "idProductor": 2,
-        "nombreProductor": "cangulo",
-        "dni": "sistemas@amazonastrading.com",
-        "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
         "estado": 1
     },
     {
@@ -64,19 +45,9 @@
         "nombreProductor": "cangulo",
         "dni": "sistemas@amazonastrading.com",
         "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
-        "estado": 1
-    },
-    {
-        "idProductor": 2,
-        "nombreProductor": "cangulo",
-        "dni": "sistemas@amazonastrading.com",
-        "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
         "estado": 1
     },
     {
@@ -84,19 +55,9 @@
         "nombreProductor": "cangulo",
         "dni": "sistemas@amazonastrading.com",
         "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
-        "estado": 1
-    },
-    {
-        "idProductor": 2,
-        "nombreProductor": "cangulo",
-        "dni": "sistemas@amazonastrading.com",
-        "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
         "estado": 1
     },
     {
@@ -104,19 +65,30 @@
         "nombreProductor": "cangulo",
         "dni": "sistemas@amazonastrading.com",
         "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
         "estado": 1
     },
     {
-        "idProductor": 2,
+        "idProductor": 1,
         "nombreProductor": "cangulo",
         "dni": "sistemas@amazonastrading.com",
         "sexo": "Am4z0n4s*",
-        "fechaNacimiento": null,
-        "anoIngreso": null,
-        "direccion": "2022-02-03T14:20:31.000Z",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
+        "estado": 1
+    },
+    {
+        "idProductor": 1,
+        "nombreProductor": "cangulo",
+        "dni": "sistemas@amazonastrading.com",
+        "sexo": "Am4z0n4s*",
+        "fechaNacimiento": "2022-02-03",
+        "anoIngreso": "2022-02-03",
+        "direccion": "Lima Peru",
         "estado": 1
     }
+
 ]

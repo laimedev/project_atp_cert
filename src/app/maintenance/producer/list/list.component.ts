@@ -13,6 +13,9 @@ export class ListComponent implements OnInit {
 
   listProducer: any [] = [];
 
+  displayedColumns: string[] = ['idProductor','nombreProductor', 'dni', 'sexo', 'fechaNacimiento', 'estado', 'anoIngreso', 'options'];
+
+
   dataSource = new MatTableDataSource(this.listProducer);
 
 
@@ -26,6 +29,11 @@ export class ListComponent implements OnInit {
       console.log(resp);
       this.dataSource = resp;
     })
+  }
+
+  ngAfterViewInit(){
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
 }

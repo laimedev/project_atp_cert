@@ -16,6 +16,6 @@ export class ToggleMenuService {
   }
 
   toggleMenu() {
-    this.subject$.next(true)
+    this.subject$.next(false)
   }
 }
