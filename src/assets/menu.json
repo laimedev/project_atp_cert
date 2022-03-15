@@ -1,9 +1,9 @@
 [
     
         {
-            "id": 2,
+            "id": 4,
             "url": null,
-            "icon": "far fa-file-word",
+            "icon": "fa fa-users",
             "displayName": "Productores",
             "subMenu": [
                 {
@@ -16,9 +16,21 @@
             ]
         },
         {
+            "id": 3,
+            "url": null,
+            "icon": "fa fa-calendar",
+            "displayName": "Planificacion"
+        },
+        {
+            "id": 2,
+            "url": null,
+            "icon": "fa fa-print",
+            "displayName": "Rreportes"
+        },
+        {
             "id": 1,
             "url": null,
-            "icon": "far fa-file-word",
+            "icon": "fa fa-cog",
             "displayName": "Administracion",
             "subMenu": [
                 {

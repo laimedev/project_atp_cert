@@ -1,5 +1,4 @@
-<!-- As a heading -->
-<div class="app-body">
+<!-- <div class="app-body">
 
 <div class="container">
     <div class="row justify-content-md-center">
@@ -58,4 +57,89 @@
 </div>
 
 
+</div> -->
+
+
+
+
+<div class="app-body">
+<div class="container">
+
+    <main class="main d-flex align-items-center" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="card-group">
+              <div class="card p-4">
+                <div class="card-body">
+                    <form (ngSubmit)="submit()" #theForm="ngForm">
+                    <h1> <b>Bievenido ATP</b> </h1>
+                    <p class="text-muted">Iniciar sesión en su cuenta</p>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                      </div>
+                      <input [(ngModel)]="login.userName" #userName="ngModel" required name="userName"
+                      type="text" placeholder="Usuario"
+                      [ngClass]="{'is-invalid' : (userName.dirty || userName.touched)  && userName.errors?.required}"
+                      class="form-control" autocomplete="off" id="userName">
+                    </div>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                      </div>
+                      <input [(ngModel)]="login.password" #password="ngModel" name="password" required
+                      [ngClass]="{'is-invalid' : (password.dirty || password.touched)  && password.errors?.required}"
+                          type="password" class="form-control" id="password" placeholder="Contraseña">
+                    </div>
+                   
+                      
+                    <div class="row">
+                      <div class="col-6">
+                        <button type="submit" class="btn btn-primary"
+                                [ngClass]="{'btn-primary': (disableButton === false), 'btn-success': (disableButton === true)}"
+                                    [disabled]="!theForm.form.valid || disableButton">
+                                    <i *ngIf="disableButton" class="fas fa-spin fa-cog"></i>
+                                    INGRESAR</button>
+                      </div>
+                      
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
+                <div class="card-body text-center">
+                  <div>
+                    <h2>CERTIFICACIONES</h2>
+                    <br>
+                    <p>Plataforma web de certificaciones <br> Amazonas Trading SAC</p>
+                   
+                    <button  type="button" class="btn btn-light active mt-3">Solicitar Usuario</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <div class="row tex-center">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div *ngIf="invalidUser" class="alert alert-danger" role="alert" >
+                        Usuario y/o contraseña incorrecta 
+                      </div>
+                </div>
+            </div>
+            
+
+          </div>
+
+          
+
+        </div>
+      </div>
+    </main>
+
 </div>
+
+  </div>
+  

@@ -15,7 +15,7 @@
             <li *ngFor="let item of menu; let i = index" [class.dropdown]="item.subMenu?.length>0">
                 <a class="" *ngIf="!item.url" [attr.data-toggle]="item.subMenu?.length>0?'collapse':''" [href]="'#collapse-id-' + item.id" aria-expanded="false"
                     >
-                    <i class="{{ item.icon }} icon"></i>
+                    <i class="{{item.icon}} icon"></i>
                     <span class="color-menu">{{ item.displayName }}</span>
                 </a>
 

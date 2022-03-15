@@ -5,12 +5,14 @@ import { AuthGuard } from '../services/guard/auth.guard';
 import { HeaderComponent } from '../header/header.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { ListComponent } from './producer/list/list.component';
+import { FormProducerComponent } from './producer/form-producer/form-producer.component';
 
 
 const routes: Routes = [
   {
     path: 'admin', canActivate: [AuthGuard], children: [
       { path: 'producer.list', component: ListComponent },
+      { path: 'producer.form/:id', component: FormProducerComponent },
       { path: '', component: HeaderComponent, outlet: 'header' },
       { path: '', component: SidebarComponent, outlet: 'sidebar' }
     ]

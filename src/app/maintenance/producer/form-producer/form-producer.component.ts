@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-form-producer',
@@ -7,7 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormProducerComponent implements OnInit {
 
-  constructor() { }
+  public idDetail = this.actRouter.snapshot.paramMap.get('id');
+
+
+  tipoSexo = [
+    {value: 'M', name: 'Masculino'},
+    {value: 'F', name: 'Femenino'}
+  ]
+
+  estadoCivil  = [
+    {value: 'S', name: 'Soltero'},
+    {value: 'C', name: 'Casado'},
+    {value: 'V', name: 'Viudo'}
+  ]
+
+  estado  = [
+    {value: 'A', name: 'Activo'},
+    {value: 'I', name: 'Inactivo'},
+  ]
+
+
+  constructor(public actRouter: ActivatedRoute) {
+
+    console.log( 'IDENTIFICADOR: ' , this.idDetail);
+
+   }
 
   ngOnInit(): void {
   }
