@@ -13,11 +13,18 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserModule } from '@angular/platform-browser';
+import { VpnRequestComponent } from './redes/vpn/vpn-request/vpn-request.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { VpnFormComponent } from './redes/vpn/vpn-form/vpn-form.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
     ListComponent,
-    FormProducerComponent
+    FormProducerComponent,
+    VpnRequestComponent,
+    VpnFormComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,10 @@ import { BrowserModule } from '@angular/platform-browser';
     MatNativeDateModule,
     MatButtonModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatDatepickerModule,
+    MatExpansionModule
+    
   ]
 })
 export class MaintenanceModule { }

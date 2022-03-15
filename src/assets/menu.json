@@ -1,6 +1,35 @@
 [
     
         {
+            "id": 5,
+            "url": null,
+            "icon": "fa fa-globe",
+            "displayName": "Redes de Datos",
+            "subMenu": [
+                {
+                    "id": 2,
+                    "url": "vpn.request",
+                    "icon": "fa fa-list",
+                    "displayName": "VPN Formulario",
+                    "subMenu": []
+                },
+                {
+                    "id": 2,
+                    "url": "producer.list",
+                    "icon": "fa fa-list",
+                    "displayName": "ACL Formulario",
+                    "subMenu": []
+                },
+                {
+                    "id": 2,
+                    "url": "producer.list",
+                    "icon": "fa fa-list",
+                    "displayName": "OTROS Formulario",
+                    "subMenu": []
+                }
+            ]
+        },
+        {
             "id": 4,
             "url": null,
             "icon": "fa fa-users",

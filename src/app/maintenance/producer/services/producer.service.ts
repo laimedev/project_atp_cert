@@ -17,4 +17,9 @@ export class ProducerService {
     return this.client.get('assets/producer.json');
   }
 
+
+  getAllVPN(): Observable<any> {
+    return this.client.get('assets/vpn.json');
+  }
+
 }

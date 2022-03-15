@@ -6,6 +6,8 @@ import { HeaderComponent } from '../header/header.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { ListComponent } from './producer/list/list.component';
 import { FormProducerComponent } from './producer/form-producer/form-producer.component';
+import { VpnRequestComponent } from './redes/vpn/vpn-request/vpn-request.component';
+import { VpnFormComponent } from './redes/vpn/vpn-form/vpn-form.component';
 
 
 const routes: Routes = [
@@ -13,6 +15,8 @@ const routes: Routes = [
     path: 'admin', canActivate: [AuthGuard], children: [
       { path: 'producer.list', component: ListComponent },
       { path: 'producer.form/:id', component: FormProducerComponent },
+      { path: 'vpn.request', component: VpnRequestComponent },
+      { path: 'vpn.form', component: VpnFormComponent },
       { path: '', component: HeaderComponent, outlet: 'header' },
       { path: '', component: SidebarComponent, outlet: 'sidebar' }
     ]

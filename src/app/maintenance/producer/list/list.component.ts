@@ -13,13 +13,8 @@ import { Router } from '@angular/router';
 export class ListComponent implements OnInit {
 
   listProducer: any [] = [];
-
   displayedColumns: string[] = ['idProductor','nombreProductor', 'dni', 'sexo', 'fechaNacimiento', 'estado', 'anoIngreso', 'options'];
-
-
   dataSource = new MatTableDataSource(this.listProducer);
-
-
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
  
@@ -40,7 +35,6 @@ export class ListComponent implements OnInit {
 
 
   verMas(user){
-    // console.log(user.idProductor)
     this.router.navigateByUrl(`admin/producer.form/${user.idProductor}`);
   }
 }

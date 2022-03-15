@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-producer',
@@ -28,13 +28,19 @@ export class FormProducerComponent implements OnInit {
   ]
 
 
-  constructor(public actRouter: ActivatedRoute) {
+  constructor(public actRouter: ActivatedRoute,
+             public router: Router) {
 
     console.log( 'IDENTIFICADOR: ' , this.idDetail);
 
    }
 
   ngOnInit(): void {
+  }
+
+
+  cancel(){
+    this.router.navigateByUrl(`admin/producer.list`);
   }
 
 }
