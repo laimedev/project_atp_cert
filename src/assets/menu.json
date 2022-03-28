@@ -1,7 +1,7 @@
 [
     
         {
-            "id": 4,
+            "id": 5,
             "url": null,
             "icon": "fa fa-users",
             "displayName": "Productores",
@@ -11,6 +11,21 @@
                     "url": "producer.list",
                     "icon": "fa fa-users",
                     "displayName": "Listar Productores",
+                    "subMenu": []
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "url": null,
+            "icon": "fa fa-home",
+            "displayName": "Propiedades",
+            "subMenu": [
+                {
+                    "id": 2,
+                    "url": "property.list",
+                    "icon": "fa fa-home",
+                    "displayName": "Listar Propiedades",
                     "subMenu": []
                 }
             ]

@@ -8,6 +8,8 @@ import { ListComponent } from './producer/list/list.component';
 import { FormProducerComponent } from './producer/form-producer/form-producer.component';
 import { VpnRequestComponent } from './redes/vpn/vpn-request/vpn-request.component';
 import { VpnFormComponent } from './redes/vpn/vpn-form/vpn-form.component';
+import { ListPropertyComponent } from './property/list-property/list-property.component';
+import { FormPropertyComponent } from './property/form-property/form-property.component';
 
 
 const routes: Routes = [
@@ -15,6 +17,11 @@ const routes: Routes = [
     path: 'admin', canActivate: [AuthGuard], children: [
       { path: 'producer.list', component: ListComponent },
       { path: 'producer.form/:id', component: FormProducerComponent },
+
+      { path: 'property.list', component: ListPropertyComponent },
+      { path: 'property.form/:id', component: FormPropertyComponent },
+
+
       { path: 'vpn.request', component: VpnRequestComponent },
       { path: 'vpn.form', component: VpnFormComponent },
       { path: '', component: HeaderComponent, outlet: 'header' },

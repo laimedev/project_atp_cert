@@ -17,6 +17,8 @@ import { VpnRequestComponent } from './redes/vpn/vpn-request/vpn-request.compone
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { VpnFormComponent } from './redes/vpn/vpn-form/vpn-form.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ListPropertyComponent } from './property/list-property/list-property.component';
+import { FormPropertyComponent } from './property/form-property/form-property.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ListComponent,
     FormProducerComponent,
     VpnRequestComponent,
-    VpnFormComponent
+    VpnFormComponent,
+    ListPropertyComponent,
+    FormPropertyComponent
   ],
   imports: [
     BrowserModule,

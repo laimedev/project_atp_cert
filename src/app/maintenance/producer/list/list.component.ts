@@ -37,4 +37,45 @@ export class ListComponent implements OnInit {
   verMas(user){
     this.router.navigateByUrl(`admin/producer.form/${user.idProductor}`);
   }
+
+
+
+   generatePasswordRand(length,type) {
+    let characters;
+    switch(type){
+        case 'num':
+            characters = "0123456789";
+            break;
+        case 'alf':
+            characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            break;
+        case 'rand':
+            //FOR ↓
+            break;
+        default:
+            characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            break;
+    }
+    var pass = "";
+    let i;
+    for (i=0; i < length; i++){
+        if(type == 'rand'){
+            pass += String.fromCharCode((Math.floor((Math.random() * 100)) % 94) + 33);
+        }else{
+            pass += characters.charAt(Math.floor(Math.random()*characters.length));   
+        }
+    }
+    return pass;
+}
+
+
+
+  generarPass(){
+    const pass  = this.generatePasswordRand(12, 'rand');
+    console.log(pass);
+  } 
+
+
+
+
 }
