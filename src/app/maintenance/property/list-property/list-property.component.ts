@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { PropertyService } from '../services/property.service';
 import { Router } from '@angular/router';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-list-property',
@@ -21,6 +22,12 @@ export class ListPropertyComponent implements OnInit {
   public latitude;
   public longitude;
 
+
+
+  @Output()lat = new EventEmitter<String>();
+  @Output()long = new EventEmitter<String>();
+
+
   constructor(public propertyService: PropertyService,
               public router: Router) { }
 
@@ -32,18 +39,13 @@ export class ListPropertyComponent implements OnInit {
   }
 
 
- 
+  
 
   verMas(element){
-
-    // console.log(element.Longitude)
-    // console.log(element.Latitud)
-    
-    // this.latitude = element.Latitud;
-    // this.longitude = element.Longitude;
-
     console.log(element);
-    this.router.navigateByUrl(`admin/property.form/${element.idProperty}`);
+    this.router.navigate([`admin/property.form/${element.idProperty}` +  element.Longitude + element.Latitud]);
+    // this.lat.emit(element.idProperty)
+    // this.long.emit(element.Longitude)
   }
 
 }
