@@ -5,11 +5,18 @@
                 <div class="card-header bg-gray" >
                     <div class="row">
                         <div class="col-12">
-                            <span class="letra-cabecera">Mantenimiento de Productores</span>
+                            <span class="letra-cabecera">Mantenimiento de Productores -  Total {{totalProductor}}</span>
                         </div>
                     </div>
                 
                         <div class="row mt-4">
+
+                            <div style="float: left;">
+                                <!-- <h4 class="card-title">Total Administradores   (  {{totalAdministradores }} )    - {{desde}}</h4> -->
+                                <!-- <h6 class="card-subtitle">Usuarios registrados en mi aplicación</h6>     -->
+                            </div>
+
+
                             <!-- <div class="col-12 text-right">
                                 <label class="font-weight-bold">Fecha: &nbsp;&nbsp;</label>
                                 <mat-form-field appearance="outline">
@@ -29,11 +36,54 @@
                                     <input autocomplete="off" matInput >
                                 </mat-form-field>
                             </div> -->
+
+                            <!-- <input type="text" class="form-control" (keyup)="buscarDNI(txtTerminoDNI.value)" #txtTerminoDNI aria-describedby="basic-addon3" placeholder="Buscar por DNI"> -->
                             
                             <div class="col-12 text-right">
-                                <button class="btn btn-primary" (click)="generarPass()">NUEVO</button>&nbsp;
+
+
+                                
+
+
+                                <mat-form-field class="w-40 mr-4" appearance="outline">
+                                    <mat-label>Buscar por ID productor</mat-label>
+                                    <input autocomplete="off" matInput  (keyup)="buscarID(txtTerminoID.value)" #txtTerminoID >
+                                </mat-form-field>
+
+                                <mat-form-field class="w-40 mr-4" appearance="outline">
+                                    <mat-label>Buscar por DNI</mat-label>
+                                    <input autocomplete="off" matInput  (keyup)="buscarDNI(txtTerminoDNI.value)" #txtTerminoDNI >
+                                </mat-form-field>
+
+                                <mat-form-field class="w-40 mr-4" appearance="outline">
+                                    <form [formGroup]="formSede" >
+                                    <!-- <mat-label>Estado</mat-label> -->
+                                    <mat-select  (selectionChange)="buscarSEDE($event)"  formControlName="sede" placeholder="Buscar por Sede" >
+                                        <mat-option value="">Busqueda por Sede</mat-option>
+                                        <mat-option *ngFor="let ts of sede" [value]="ts.value">
+                                            {{ts.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                    </form>
+                                </mat-form-field>
+
+
+                                <mat-form-field class="mr-4" appearance="outline">
+                                    <mat-label>Seleccione un rango</mat-label>
+                                    <mat-date-range-input [formGroup]="dateRange" [rangePicker]="picker">
+                                        <input noKeyEventsHere matStartDate formControlName="start" placeholder="Inicio">
+                                        <input noKeyEventsHere matEndDate formControlName="end" placeholder="Fin">
+                                    </mat-date-range-input>
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-date-range-picker #picker></mat-date-range-picker>
+                                </mat-form-field>
+
+                                
+
+
+                                <button class="btn btn-primary" (click)="irForm()"><i class="fas fa-plus mr-1"> </i> NUEVO</button>&nbsp;
                                 <!-- <button (click)="search()"  class="btn btn-primary">BUSCAR</button>&nbsp; -->
-                                <button  class="btn btn-success">EXPORTAR</button>&nbsp;
+                                <button  class="btn btn-success" (click)="cargarTodo()"><i class="fas fa-file-excel mr-2"> </i>EXPORTAR</button>&nbsp;
                             </div>
                         </div>
                 </div>
@@ -41,111 +91,70 @@
 
 
                 <div class="card-body">
-                    <div class="row card-header bg-gray">
-                        <div class="col-12">
-                            <div  class="table-responsive  table-striped mat-elevation-z8 ">
-                               
-                                <table  style="width: 100%;" mat-table [dataSource]="dataSource" matSort class="" >
-      
-                                    <ng-container matColumnDef="idProductor">
-                                      <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                      mat-sort-header class='btn-primary'> ID </th>
-                                      <td mat-cell *matCellDef="let element"> {{element.idProductor}} </td>
-                                    </ng-container>
-                                  
-                                     <ng-container matColumnDef="nombreProductor">
-                                      <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                      mat-sort-header class='btn-primary'> Nombre </th>
-                                      <td mat-cell *matCellDef="let element"> {{element.nombreProductor}} </td>
-                                    </ng-container>
-                                  
-                                     <ng-container matColumnDef="dni"> 
-                                      <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                      mat-sort-header class='btn-primary'> CORREO </th>
-                                      <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
-                                    </ng-container>
-                                  
-                                    <ng-container matColumnDef="sexo">
-                                      <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                      mat-sort-header class='btn-primary'> CLAVE </th>
-                                      <td mat-cell *matCellDef="let element"> {{element.sexo}} </td>
-                                    </ng-container>
-
-                                    <ng-container matColumnDef="fechaNacimiento">
-                                        <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                        mat-sort-header class='btn-primary'> CLAVE </th>
-                                        <td mat-cell *matCellDef="let element"> {{element.fechaNacimiento}} </td>
-                                      </ng-container>
 
 
-                                      <ng-container matColumnDef="estado">
-                                        <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                        mat-sort-header class='btn-primary'> CLAVE </th>
-                                        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
-                                      </ng-container>
 
 
-                                      <ng-container matColumnDef="anoIngreso">
-                                        <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                        mat-sort-header class='btn-primary'> CLAVE </th>
-                                        <td mat-cell *matCellDef="let element"> {{element.anoIngreso}} </td>
-                                      </ng-container>
+                    <div class="table-responsive">
+                        <br>
+                        <table class="table table-bordered">
+                            <thead style="background-color: #007BFF; color: #fff; font-weight: lighter;">
+                                <tr>
+                                    <th>ID Productor</th>
+                                    <th>Nombres</th>
+                                    <th>Apellido P</th>
+                                    <!-- <th>Apellido M</th> -->
+                                    <th>Sexo</th>
+                                    <th>DNI</th>
+                                    <th>Celular</th>
+                                    <th>Direcccion</th>
+                                    <th>Fecha Ins.</th>
+                                    <th>Estado</th>
+                                    <th class="text-nowrap text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of productor">
 
+                                    <td>{{data.id_productor}}</td>
+                                    <td>{{data.nombres}}</td>
+                                    <td>{{data.apellido_p}}</td>
+                                    <!-- <td>{{data.apellido_m}}</td> -->
+                                    <td>{{data.sexo}}</td>
+                                    <td>{{data.dni}}</td>
+                                    <td>{{data.celular}}</td>
+                                    <td>{{data.direccion}}</td>
+                                    <td>{{data.fecha_inscripcion}}</td>
+                                    <td>{{data.status}}</td>
 
-                                      <ng-container matColumnDef="options">
-                                        <th  id class="font-weight-bold text-muted text-center" mat-header-cell *matHeaderCellDef
-                                        mat-sort-header class='btn-primary'>OPCIONES </th>
-                                        <td mat-cell *matCellDef="let element" > 
-                                            <a   class="btn btn-light btn-sm"  (click)="verMas(element)" ><i
-                                                class="fas fa-info-circle"></i></a>
-                                        <a  class="btn btn-light btn-sm"><i
-                                                class="fas fa-download"></i></a>
-                                        <a class="btn btn-light btn-sm"><i
-                                                class="far fa-trash-alt"></i></a>
-                                        </td>
-                                    </ng-container>
-
-                                    <!--<ng-container matColumnDef="PhoneNumber">
-                                        <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                        mat-sort-header class='btn-primary'> TELEFONO </th>
-                                        <td mat-cell *matCellDef="let element"> {{element.PhoneNumber}} </td>
-                                      </ng-container>
-                                    
-                                      <ng-container matColumnDef="CreateDate">
-                                        <th  id class="font-weight-bold text-dark" mat-header-cell *matHeaderCellDef
-                                        mat-sort-header class='btn-primary'> CREADO </th>
-                                        <td mat-cell *matCellDef="let element"> {{element.CreateDate}} </td>
-                                      </ng-container>
-
-                            
-                                    <ng-container matColumnDef="options">
-                                        <th  id class="font-weight-bold text-muted text-center" mat-header-cell *matHeaderCellDef
-                                        mat-sort-header class='btn-primary'>OPCIONES </th>
-                                        <td mat-cell *matCellDef="let element" > 
-                                            <a   class="btn btn-light btn-sm"><i
-                                                class="fas fa-info-circle"></i></a>
-                                        <a  class="btn btn-light btn-sm"><i
-                                                class="fas fa-download"></i></a>
-                                        <a class="btn btn-light btn-sm"><i
-                                                class="far fa-trash-alt"></i></a>
-                                        </td>
-                                    </ng-container> -->
-                                  
-                                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                                  </table>
-
-                                  <!-- <mat-paginator [pageSizeOptions]="[1, 10, 20]" showFirstLastButtons></mat-paginator> -->
-
-
-                                <!-- <mat-paginator *ngIf="dataSource.page$ | async as page" [length]="page.total"
-                                    [pageSize]="page.pageSize" [pageIndex]="page.pageNumber" [hidePageSize]="false"
-                                    (page)="dataSource.fetch($event.pageIndex)">
-                                </mat-paginator> -->
-
-                            </div>
-                        </div>
+                                
+                
+                                    <td class="text-nowrap text-center">
+                                        <button  class="cursor btn btn-secondary mr-2" (click)="irEdit(data)"  > <i class="fas fa-info-circle"> </i>  </button> 
+                                        <button  class="cursor btn btn-danger mr-2"  (click)="delete()" > <i class="fas fa-trash-alt"> </i>  </button> 
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
                     </div>
+
+                <button (click)="cambiarPagina(-5)" class="btn btn-secondary"> <i class="fas fa-arrow-left mr-1"> </i> Anteriores</button>
+                    &nbsp;
+                    <button (click)="cambiarPagina(5)" class="btn btn-success">Siguientes  <i class="fas fa-arrow-right mr-1"> </i> </button> 
+
+
+
+
+
+
+
+
+
+
+
+
+                    
                 </div>
 
 

@@ -19,6 +19,7 @@ import { VpnFormComponent } from './redes/vpn/vpn-form/vpn-form.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ListPropertyComponent } from './property/list-property/list-property.component';
 import { FormPropertyComponent } from './property/form-property/form-property.component';
+import { GeoComponent } from './property/geo/geo.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FormPropertyComponent } from './property/form-property/form-property.co
     VpnRequestComponent,
     VpnFormComponent,
     ListPropertyComponent,
-    FormPropertyComponent
+    FormPropertyComponent,
+    GeoComponent
   ],
   imports: [
     BrowserModule,

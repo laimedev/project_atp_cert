@@ -30,6 +30,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.docTitleService.setTitle('Iniciar Sesión - ' + environment.appTitle)
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
+    this.login.userName = 'cangulo';
+    this.login.password = 'Am4z0n4s*';
   }
 
   submit() {

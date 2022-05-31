@@ -10,6 +10,7 @@ import { VpnRequestComponent } from './redes/vpn/vpn-request/vpn-request.compone
 import { VpnFormComponent } from './redes/vpn/vpn-form/vpn-form.component';
 import { ListPropertyComponent } from './property/list-property/list-property.component';
 import { FormPropertyComponent } from './property/form-property/form-property.component';
+import { GeoComponent } from './property/geo/geo.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
 
       { path: 'property.list', component: ListPropertyComponent },
       { path: 'property.form/:id', component: FormPropertyComponent },
+      { path: 'property.geo/:id', component: GeoComponent },
 
 
       { path: 'vpn.request', component: VpnRequestComponent },
