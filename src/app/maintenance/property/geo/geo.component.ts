@@ -4,6 +4,11 @@ import { Map, marker, polygon, tileLayer } from 'leaflet';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProducerService } from '../../producer/services/producer.service';
 
+import * as L from 'leaflet';
+import 'leaflet-draw';
+
+
+
 @Component({
   selector: 'app-geo',
   templateUrl: './geo.component.html',
@@ -20,6 +25,9 @@ export class GeoComponent implements OnInit {
 
   @Input() lat;
   @Input() long;
+
+
+  
 
   constructor(public router: Router,
     private prodService: ProducerService,
@@ -43,8 +51,6 @@ export class GeoComponent implements OnInit {
     tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
       maxZoom: 20,
     }).addTo(map);
-
-
     const latLngs: [number, number] [] = [
       [-11.04637, -77.0427934],
       [-12.03337, -73.0427634],
@@ -56,7 +62,14 @@ export class GeoComponent implements OnInit {
     
     const markerItem =  marker([this.latitude , this.longitude ]).addTo(map).bindPopup("Sede Lima Centro - Amazonas Trading SAC").openPopup();
     map.fitBounds(latLngs );
+
+
+
+   
   }
+
+
+ 
 
 
   regresar(){
@@ -65,6 +78,14 @@ export class GeoComponent implements OnInit {
 
 
 
+
+
+
+
+
+
+  
+  
 
 
 }
