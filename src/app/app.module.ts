@@ -19,6 +19,10 @@ import { UtilsModule } from './utils/utils.module';
 import {SegModule} from './seg/seg.module'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MaintenanceModule } from './maintenance/maintenance.module';
+import { MantenimientoModule } from './mantenimiento/mantenimiento.module';
+import { OrganizacionModule } from './organizacion/organizacion.module';
+import { AdministracionModule } from './administracion/administracion.module';
+import { CertificacionModule } from './certificacion/certificacion.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,6 @@ import { MaintenanceModule } from './maintenance/maintenance.module';
     SidebarComponent,
     HeaderComponent,
     FooterComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,11 @@ import { MaintenanceModule } from './maintenance/maintenance.module';
     HomeModule,
     LoginModule,
     SegModule,
+    AdministracionModule,
     MaintenanceModule,
+    MantenimientoModule,
+    OrganizacionModule,
+    CertificacionModule,
     SecurityModule,
     BrowserAnimationsModule,
     NgbModule,

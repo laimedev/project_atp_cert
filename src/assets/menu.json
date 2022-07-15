@@ -8,14 +8,14 @@
             "subMenu": [
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "usuario.list",
                     "icon": "fa fa-users",
                     "displayName": "Usuarios",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "rol.list",
                     "icon": "fa fa-users",
                     "displayName": "Roles",
                     "subMenu": []
@@ -30,28 +30,28 @@
             "subMenu": [
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "estacion.list",
                     "icon": "fa fa-users",
                     "displayName": "Estaciones de compra",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "departamento.list",
                     "icon": "fa fa-users",
                     "displayName": "Departamentos",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "cargo.list",
                     "icon": "fa fa-users",
                     "displayName": "Cargos",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "empleado.list",
                     "icon": "fa fa-users",
                     "displayName": "Empleados",
                     "subMenu": []
@@ -59,42 +59,42 @@
             ]
         },
         {
-            "id": 7,
+            "id": 6,
             "url": null,
             "icon": "fa fa-database",
             "displayName": "MANTENIMIENTO",
             "subMenu": [
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "person.list",
                     "icon": "fa fa-users",
                     "displayName": "Personas",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "gender.list",
                     "icon": "fa fa-users",
                     "displayName": "Genero",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "civil.list",
                     "icon": "fa fa-users",
                     "displayName": "Estado Civil",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "instruction.list",
                     "icon": "fa fa-users",
                     "displayName": "Grado de Instruccion",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "ubigeo.list",
                     "icon": "fa fa-users",
                     "displayName": "Ubigeo",
                     "subMenu": []
@@ -102,7 +102,7 @@
             ]
         },
         {
-            "id": 7,
+            "id": 5,
             "url": null,
             "icon": "fa fa-folder-open",
             "displayName": "UNIDAD PRODUCTIVA",
@@ -116,7 +116,7 @@
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "property.list",
                     "icon": "fa fa-users",
                     "displayName": "Propiedades",
                     "subMenu": []
@@ -223,7 +223,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": 3,
             "url": null,
             "icon": "fa fa-print",
             "displayName": "REPORTES"
