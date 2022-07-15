@@ -109,49 +109,49 @@
             "subMenu": [
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "productor.list",
                     "icon": "fa fa-users",
                     "displayName": "Productores",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "propiedad.list",
                     "icon": "fa fa-users",
                     "displayName": "Propiedades",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "area.list",
                     "icon": "fa fa-users",
                     "displayName": "Areas",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "tipoarea.list",
                     "icon": "fa fa-users",
                     "displayName": "Tipo de Areas",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "cultivo.list",
                     "icon": "fa fa-users",
                     "displayName": "Cultivos",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "pendiente.list",
                     "icon": "fa fa-users",
                     "displayName": "Pendientes",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "producer.list",
+                    "url": "variedad.list",
                     "icon": "fa fa-users",
                     "displayName": "Variedades",
                     "subMenu": []
@@ -166,66 +166,61 @@
             "subMenu": [
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "grupo.list",
                     "icon": "fa fa-home",
                     "displayName": "Grupos",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "unidad.list",
                     "icon": "fa fa-home",
                     "displayName": "Unidades de procesamiento",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "proceso.list",
                     "icon": "fa fa-home",
                     "displayName": "Procesos",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "certificado.list",
                     "icon": "fa fa-home",
                     "displayName": "Certificados",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "campana.list",
                     "icon": "fa fa-home",
                     "displayName": "Campañas",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "programa.list",
                     "icon": "fa fa-home",
                     "displayName": "Programas",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "entidad.list",
                     "icon": "fa fa-home",
-                    "displayName": "Entifades",
+                    "displayName": "Entidades",
                     "subMenu": []
                 },
                 {
                     "id": 2,
-                    "url": "property.list",
+                    "url": "propiedad.list",
                     "icon": "fa fa-home",
                     "displayName": "Propiedades",
                     "subMenu": []
                 }
             ]
-        },
-        {
-            "id": 3,
-            "url": null,
-            "icon": "fa fa-print",
-            "displayName": "REPORTES"
         }
+       
 ]

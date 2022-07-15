@@ -23,6 +23,7 @@ import { MantenimientoModule } from './mantenimiento/mantenimiento.module';
 import { OrganizacionModule } from './organizacion/organizacion.module';
 import { AdministracionModule } from './administracion/administracion.module';
 import { CertificacionModule } from './certificacion/certificacion.module';
+import { UnproductivaModule } from './unproductiva/unproductiva.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CertificacionModule } from './certificacion/certificacion.module';
     LoginModule,
     SegModule,
     AdministracionModule,
+    UnproductivaModule,
     MaintenanceModule,
     MantenimientoModule,
     OrganizacionModule,
