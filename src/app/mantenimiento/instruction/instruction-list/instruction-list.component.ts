@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InstructionServiceService } from '../services/instruction-service.service';
 
 @Component({
   selector: 'app-instruction-list',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstructionListComponent implements OnInit {
 
-  constructor() { }
+  public data: any = [];
+
+  constructor(public instructionServ: InstructionServiceService) { }
 
   ngOnInit(): void {
+    this.instructionServ.getInstruction().subscribe((data) => {
+      this.data = data
+      console.log(data);
+    })
   }
 
 }

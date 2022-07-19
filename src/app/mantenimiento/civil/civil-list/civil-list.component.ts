@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CivilServiceService } from '../services/civil-service.service';
 
 @Component({
   selector: 'app-civil-list',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CivilListComponent implements OnInit {
 
-  constructor() { }
+  public data: any = [];
+
+  constructor(public genderServ: CivilServiceService) { }
 
   ngOnInit(): void {
+    this.genderServ.getCivil().subscribe((data) => {
+      this.data = data
+      console.log(data);
+    })
   }
 
 }

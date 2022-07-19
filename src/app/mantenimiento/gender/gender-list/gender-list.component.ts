@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GenderServiceService } from '../gender-service.service';
 
 @Component({
   selector: 'app-gender-list',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenderListComponent implements OnInit {
 
-  constructor() { }
+public data: any = [];
+
+  constructor(public genderServ: GenderServiceService) { }
 
   ngOnInit(): void {
+    this.genderServ.getGender().subscribe((data) => {
+      this.data = data
+      console.log(data);
+    })
   }
 
 }
