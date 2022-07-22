@@ -15,7 +15,7 @@ import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.compon
     RolFormComponent,
     RolListComponent,
     UsuarioFormComponent,
-    UsuarioListComponent
+    UsuarioListComponent,
   ],
   imports: [
     CommonModule,
