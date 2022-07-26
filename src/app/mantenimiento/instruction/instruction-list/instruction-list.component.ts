@@ -13,7 +13,7 @@ export class InstructionListComponent implements OnInit {
   public data: any = [];
 
   constructor(public instructionServ: InstructionServiceService,
-    private modalService: NgbModal) { }
+              private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.instructionServ.getInstruction().subscribe((data) => {
@@ -27,8 +27,7 @@ export class InstructionListComponent implements OnInit {
   openCreate() {
     const modalInfo = this.modalService.open(CreateInstructionComponent, { size: 'lg', backdrop: 'static' })
     // modalInfo.componentInstance.user = user
-    modalInfo.result.then(res => {
-
+      modalInfo.result.then(res => {
     })
   }
 
