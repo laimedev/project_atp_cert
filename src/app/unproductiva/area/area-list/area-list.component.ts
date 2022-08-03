@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AreaService } from '../services/area.service';
 
 @Component({
   selector: 'app-area-list',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AreaListComponent implements OnInit {
 
-  constructor() { }
+  public data: any = [];
+
+
+  constructor(public areaServices: AreaService) { }
 
   ngOnInit(): void {
+    this.areaServices.getAreas().subscribe((data) => {
+      this.data = data
+      console.log(data);
+    })
   }
 
 }
+
+
+
