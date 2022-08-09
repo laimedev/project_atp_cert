@@ -22,14 +22,10 @@ export class AuthorizeDirective implements OnInit {
     
    }
   ngOnInit(): void {
-
     if (this.sessionService.getAuthorities().includes(this.permission)) {
       this.containerRef.createEmbeddedView(this.templateRef)
     } else {
       this.containerRef.clear()
     }
   }
-
-   
-
 }

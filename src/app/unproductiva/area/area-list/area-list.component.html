@@ -20,8 +20,14 @@
                             <thead style="background-color: #007BFF; color: #fff; font-weight: lighter;">
                                 <tr>
                                     <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Descripcion</th>
+                                    <th>Propietario</th>
+                                    <th>Productor</th>
+                                    <th>Pendiente</th>
+                                    <th>Altitud</th>
+                                    <th>Longitud</th>
+                                    <th>Latitud</th>
+
+
                                     <th>Creado</th>
                                     <th>Responsable</th>
                                     <th>Actualizacion</th>
@@ -32,12 +38,18 @@
                             <tbody>
                                 <tr *ngFor="let data of data">
                                     <td>{{data.id}}</td>
-                                    <td>{{data.job_title_name}}</td>
-                                    <td>{{data.description}}</td>
-                                    <td>{{data.created}}</td>
-                                    <td>{{data.update_user}}</td>
-                                    <td>{{data.update_date}}</td>
+                                    <td>{{data.property_id}}</td>
+                                    <td>{{data.producer_id}}</td>
+                                    <td>{{data.slope_id}}</td>
+                                    <td>{{data.altitude}}</td>
+                                    <td>{{data.longitude}}</td>
+                                    <td>{{data.latitude}}</td>
+
+                                    <td>{{data.shape_area}}</td>
+                                    <td>{{data.dimension_ha}}</td>
+                                    <td>{{data.create_date}}</td>
                                     <td>{{data.situation}}</td>
+
                                     <td class="text-nowrap text-center">
                                         <button  class="cursor btn btn-secondary mr-2"   > <i class="fas fa-info-circle"> </i>  </button> 
                                         <button  class="cursor btn btn-warning mr-2"  > <i class="fa fa-edit"> </i>  </button> 
@@ -51,7 +63,7 @@
                         &nbsp;
                     <button  class="btn btn-success">Siguientes  <i class="fas fa-arrow-right mr-1"> </i> </button> 
                 </div>
-                
+
 
 
             </div>

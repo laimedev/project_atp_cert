@@ -10,7 +10,6 @@ export class NoKeyEventsDirective {
   @HostListener('keyup', ['$event'])
   onKeyUp(event: KeyboardEvent) {
     console.log("tmr");
-
     event.preventDefault();
     event.stopPropagation();
   }
@@ -24,6 +23,5 @@ export class NoKeyEventsDirective {
     event.preventDefault();
     event.stopPropagation();
   }
-
 
 }
